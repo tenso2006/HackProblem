@@ -45,12 +45,14 @@ var testingTransform = function(array) {
   return transform;
 };
 
-var insertionSort = function(array) {
+
+var insertionSort = function(array, comparator) {
   // Your code goes here. Feel free to add helper functions if needed.
-  var result = [];
+
+  //array[j] < array[--j];
   for (var i = 0; i < array.length; i++) {
     var j = i;
-    while(array[j] < array[--j]) {
+    while( j > 0 && comparator(array[j], array[--j])) {
       var temp = array[j];
       array[j] = array[j+1];
       array[j+1] = temp;
@@ -59,4 +61,14 @@ var insertionSort = function(array) {
   return array;
 };
 
-console.log(insertionSort([1,2,9,2,1,9,3,2,1,0]));
+console.log(insertionSort([1,2,9,2,1,9,3,2,1,0], function (a,b) {
+  return a < b;
+}));
+
+console.log(insertionSort([{value: 2}, {value: 1}, {value: 3}], function(a,b) {
+  return a.value > b.value;
+}));
+
+console.log(insertionSort([{value: 10}, {value: 5, order: 1}, {value: 5, order: 2}], function(a,b) {
+  return a.value < b.value;
+}));
