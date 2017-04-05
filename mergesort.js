@@ -123,7 +123,7 @@ var merge = function (left, right) {
     }
   }
 
-  var remaining = i === left.length ? right.slice(j) : left.slice(i);
+  var remaining  =i === left.length ? right.slice(j) : left.slice(i);
   //print("Remaining: ", remaining, ", Result: ", result.concat(remaining));
   return result.concat(remaining);
   //return result;
