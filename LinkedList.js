@@ -31,14 +31,28 @@ LinkedList.prototype.contains = function (val) {
   return false;
 };
 
+//[4] -> [8] -> [9] -> [2] -> null
+LinkedList.prototype.prepend = function (val) {
+
+  var newNode = {
+    val: val,
+    next: this.head
+  };
+
+  newNode.next = this.head;
+  this.head = newNode;
+};
+
 var list = new LinkedList();
 console.log(list.isEmpty());
 console.log(list.size());
 console.log(list.contains());
-
-LinkedList.prototype.prepend = function () {
-
-};
+list.prepend(5);
+list.prepend(8);
+console.log(list.isEmpty());
+console.log(list.size());
+console.log(list.contains());
+console.log(list);
 
 LinkedList.prototype.append = function () {
 
