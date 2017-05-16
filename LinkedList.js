@@ -87,6 +87,16 @@ LinkedList.prototype.remove = function (val) {
   prev.next = curr.next;
 };
 
+LinkedList.prototype.print = function () {
+  var result = [];
+  var current = this.head;
+  while(current !== null) {
+    result.push(current.val);
+    current = current.next;
+  }
+  return result;
+};
+
 var list = new LinkedList();
 list.prepend(5);
 list.prepend(8);
@@ -98,3 +108,5 @@ list.append(1);
 console.log(list);
 list.remove(8);
 console.log(list);
+console.log(list.print());
+
