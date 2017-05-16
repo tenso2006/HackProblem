@@ -3,8 +3,11 @@ var LinkedList = function () {
 };
 
 LinkedList.prototype.isEmpty = function () {
-
+  return this.head === null;
 };
+
+var list = new LinkedList();
+console.log(list.isEmpty());
 
 LinkedList.prototype.size = function () {
 
