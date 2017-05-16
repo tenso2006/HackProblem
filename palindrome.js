@@ -12,3 +12,4 @@
   };
   console.log(palindrome('civic'));
 })();
+
