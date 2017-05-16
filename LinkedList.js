@@ -19,13 +19,22 @@ LinkedList.prototype.size = function () {
   return count;
 };
 
+//[20] -> [30] -> [50] -> null
+LinkedList.prototype.contains = function (val) {
+  var current = this.head;
+  while(current !== null) {
+    if(current.val === val) {
+      return true;
+    }
+    current = current.next;
+  }
+  return false;
+};
+
 var list = new LinkedList();
 console.log(list.isEmpty());
 console.log(list.size());
-
-LinkedList.prototype.contains = function () {
-
-};
+console.log(list.contains());
 
 LinkedList.prototype.prepend = function () {
 
