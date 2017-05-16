@@ -39,25 +39,62 @@ LinkedList.prototype.prepend = function (val) {
     next: this.head
   };
 
-  newNode.next = this.head;
   this.head = newNode;
 };
 
+// [23] -> [4] -> [4] -> [2] -> null
+
+LinkedList.prototype.append = function (val) {
+
+  var newNode = {
+    val: val,
+    next: null
+  };
+
+  if(this.isEmpty()) {
+    this.head = newNode;
+    return;
+  }
+
+  var current = this.head;
+  while(current.next !== null) {
+    current = current.next;
+  }
+
+  current.next  = newNode;
+};
+
+
+
+LinkedList.prototype.remove = function (val) {
+  if(!this.contains(val)){
+    return;
+  }
+
+  if(this.head.val === val) {
+    this.head = this.head.next;
+    return;
+  }
+
+  var prev = null;
+  var curr = this.head;
+
+  while(curr.val !== val) {
+    prev = curr;
+    curr = curr.next;
+  }
+
+  prev.next = curr.next;
+};
+
 var list = new LinkedList();
-console.log(list.isEmpty());
-console.log(list.size());
-console.log(list.contains());
 list.prepend(5);
 list.prepend(8);
 console.log(list.isEmpty());
 console.log(list.size());
 console.log(list.contains());
 console.log(list);
-
-LinkedList.prototype.append = function () {
-
-};
-
-LinkedList.prototype.remove = function () {
-
-};
+list.append(1);
+console.log(list);
+list.remove(8);
+console.log(list);
