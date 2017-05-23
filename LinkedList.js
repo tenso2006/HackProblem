@@ -109,4 +109,3 @@ console.log(list);
 list.remove(8);
 console.log(list);
 console.log(list.print());
-
