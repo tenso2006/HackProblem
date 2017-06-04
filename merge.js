@@ -20,10 +20,14 @@ var merge = function (arr1, arr2) {
     result = result.concat(arr1.slice(i));
   }
   if( j < arr2.length ) {
-    result.concat(arr2.slice(j));
+    result = result.concat(arr2.slice(j));
   }
 
   return result;
 };
 
+console.log(merge([1,2,7], [2,3,4,8]));
 console.log(merge([1,2,7,9,10], [2,3,4,8]));
+console.log(merge([2,3,4],[4,5,5]));
+
+module.exports = merge;

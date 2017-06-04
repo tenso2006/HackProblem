@@ -1,0 +1,23 @@
+{
+  "name": "hackproblem",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tenso2006/HackProblem.git"
+  },
+  "author": "Tenzin Sonam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tenso2006/HackProblem/issues"
+  },
+  "homepage": "https://github.com/tenso2006/HackProblem#readme",
+  "dependencies": {
+    "chai": "^4.0.1",
+    "mocha": "^3.4.2"
+  }
+}
