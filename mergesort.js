@@ -129,7 +129,7 @@ var merge = function (left, right) {
   //return result;
 };
 
-
+console.log(merge([1,2,7,9], [2,3,4]));
 
 var test = [2,3,1,4,5,9,3,4,1];
 console.log(mergeSort(test));
