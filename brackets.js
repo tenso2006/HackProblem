@@ -48,6 +48,6 @@ var isBracketsMatching = function (brackets) {
   return true;
 };
 
-console.log(isBracketsMatching('[{[]([])]'));
+console.log(isBracketsMatching('[[[[[[[[[[{{{{{{{{{{}}}}}}}}}}]]]]]]]]]]((((({{{{{[[[[[]]]]]}}}}})))))'));
 
 
