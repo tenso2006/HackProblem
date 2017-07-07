@@ -36,9 +36,9 @@ var isAnagramOn = function (source, target) {
 // console.log(isAnagramOn('can', 'acn'));
 // console.log(isAnagramOn('can', 'acb'));
 
-console.log(isAnagram('can', 'nac'));
-console.log(isAnagram('can', 'acn'));
-console.log(isAnagram('can', 'acb'));
+// console.log(isAnagram('can', 'nac'));
+// console.log(isAnagram('can', 'acn'));
+// console.log(isAnagram('can', 'acb'));
 
 var anagramPair = function (arr1, arr2) {
   if(arr1.length !== arr2.length) {
